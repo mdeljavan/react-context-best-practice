@@ -1,0 +1,10 @@
+.Input {
+	margin-bottom: 24px;
+	border-radius: 15px;
+	padding: 8px;
+	font-size: 16px;
+}
+
+.Input:focus-visible {
+	outline: none;
+}

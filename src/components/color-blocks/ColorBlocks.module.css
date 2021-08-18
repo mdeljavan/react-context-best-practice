@@ -1,0 +1,8 @@
+.colorBlocks {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.colorBlock {
+	cursor: pointer;
+}
