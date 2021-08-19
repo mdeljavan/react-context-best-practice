@@ -2,10 +2,12 @@ import * as React from "react";
 import { BadPerformance } from "./bad-performance/BadPerformance";
 import classes from "./App.module.css";
 import { ImprovedPerformance } from "./improve-performance/ImprovedPerformance";
+import { BestPractice } from "./best-practice/BestPractice";
 
 enum Pattern {
-	"BadPerformance" = "Bad performance",
-	"ImprovedPerformance" = "Improved performance",
+	"BadPerformance" = "BadPerformance",
+	"ImprovedPerformance" = "ImprovedPerformance",
+	"BestPractice" = "BestPractice",
 }
 
 function App() {
@@ -26,12 +28,14 @@ function App() {
 				<option value={Pattern.ImprovedPerformance}>
 					Improved Performance
 				</option>
+				<option value={Pattern.BestPractice}>Best Practice</option>
 			</select>
 			<div className={classes.App}>
 				{pattern === Pattern.BadPerformance ? <BadPerformance /> : null}
 				{pattern === Pattern.ImprovedPerformance ? (
 					<ImprovedPerformance />
 				) : null}
+				{pattern === Pattern.BestPractice ? <BestPractice /> : null}
 			</div>
 		</div>
 	);
