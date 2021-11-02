@@ -1,4 +1,6 @@
 import * as React from "react";
+import { ColorBlocksSelector } from "./ColorBlocks";
+import { Input } from "./Input";
 import { ImprovedPerformanceContext } from "./context";
 
 interface OwnProps {}
@@ -18,6 +20,8 @@ export function ImprovedPerformanceProvider(props: Props) {
 
 	return (
 		<ImprovedPerformanceContext.Provider value={value}>
+			<Input />
+			<ColorBlocksSelector />
 			{props.children}
 		</ImprovedPerformanceContext.Provider>
 	);
